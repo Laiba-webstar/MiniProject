@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PakCars - Full Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="pak.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+  <div class="container-fluid">
+    <!-- Logo on the left -->
+    <a class="navbar-brand " href="#home">
+      <img src="new-pw-logo-white-c4cd16ae34613cc1fa16d7840f34a71e.svg" alt="PakWheels Logo" style="height: 40px;">
+    </a>
+
+    <!-- Toggler for mobile view -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Main navbar content -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <!-- Left side nav links -->
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Used Cars</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Search Used Cars</a></li>
+            <li><a class="dropdown-item" href="#">Used Car Dealers</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">New Cars</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Upcoming Cars</a></li>
+            <li><a class="dropdown-item" href="#">Prices</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Bikes</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Used Bikes</a></li>
+            <li><a class="dropdown-item" href="#">New Bikes</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Auto Store</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Videos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Forums</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">More</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Tools</a></li>
+            <li><a class="dropdown-item" href="#">Reviews</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Right side login and post ad -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a href="#postad" class="btn btn-danger me-2">Post an Ad</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#login">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#signup">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Find Used Cars in Pakistan</h1>
+      <p class="lead">With thousands of cars, we have just the right one for you</p>
+
+      <div class="search-box">
+        <div class="row g-0">
+          <div class="col-md-4 col-12">
+            <input type="text" placeholder="Car Make or Model" class="form-control" />
+          </div>
+          <div class="col-md-4 col-12">
+            <select class="form-select">
+              <option selected>All Cities</option>
+              <option>Lahore</option>
+              <option>Karachi</option>
+              <option>Islamabad</option>
+            </select>
+          </div>
+          <div class="col-md-3 col-9">
+            <select class="form-select">
+              <option selected>Price Range</option>
+              <option>Under 10 Lakh</option>
+              <option>10 - 20 Lakh</option>
+              <option>20+ Lakh</option>
+            </select>
+          </div>
+          <div class="col-md-1 col-3">
+            <button class="btn btn-success w-100"><i class="bi bi-search"></i>🔍</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="advanced-filter-btn">Advanced Filter ></button>
+    </div>
+  </section>
+  <!--section after heroes-->
+  <div class="container">
+  <div class="sell-section">
+    <h3 class="text-center mb-5">Sell Your Car on PakWheels and Get the Best Price</h3>
+    <div class="row align-items-center text-center">
+      
+      <!-- Left Option -->
+      <div class="col-md-5 mb-4 mb-md-0">
+        <h5 class="text-primary">Post your Ad on PakWheels</h5>
+        <ul class="list-unstyled mt-4 tick-list text-start mx-auto" style="max-width: 300px;">
+          <li>Post your Ad for Free in 3 Easy Steps</li>
+          <li>Get Genuine offers from Verified Buyers</li>
+          <li>Sell your car Fast at the Best Price</li>
+        </ul>
+        <button class="btn btn-custom-green mt-4">Post Your Ad</button>
+      </div>
+
+      <!-- Divider -->
+      <div class="col-md-2 divider-col">
+        <div class="or-divider">OR</div>
+      </div>
+
+      <!-- Right Option -->
+      <div class="col-md-5">
+        <h5 class="text-primary">Try PakWheels Sell It For Me</h5>
+        <ul class="list-unstyled mt-4 tick-list text-start mx-auto" style="max-width: 300px;">
+          <li>Dedicated Sales Expert to Sell your Car</li>
+          <li>We Bargain for you and share the Best</li>
+          <li>We ensure Safe & Secure Transaction</li>
+        </ul>
+        <button class="btn btn-custom-blue mt-4">Register Your Car</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+ <!--browse used cars-->
+ <section id="browse-used-cars" class="py-5 bg-light">
+  <div class="container-fluid py-5" style="background-color: #F0F8FF";>
+    <h3 class="mb-4">Browse Used Cars</h3>
+  
+    <!-- Tabs -->
+    <div class="d-flex mb-4 flex-wrap">
+      <div class="tab-btn active" onclick="switchTab('category')">Category</div>
+      <div class="tab-btn" onclick="switchTab('city')">City</div>
+      <div class="tab-btn" onclick="switchTab('make')">Make</div>
+      <div class="tab-btn" onclick="switchTab('model')">Model</div>
+      <div class="tab-btn" onclick="switchTab('budget')">Budget</div>
+      <div class="tab-btn" onclick="switchTab('body')">Body Type</div>
+    </div>
+  
+    <!-- Category Tab Content -->
+    <div id="category" class="tab-content">
+      <div class="carousel-wrapper">
+        <div class="arrow-btn arrow-left" onclick="prevSlide()">❮</div>
+        <div class="arrow-btn arrow-right" onclick="nextSlide()">❯</div>
+        <div id="carouselTrack" class="carousel-track">
+          <div class="carousel-slide">
+            <!-- Slide 1 -->
+            <div class="car-card"><img src="automative.svg" alt=""/><p>Automatic cars</p></div>
+            <div class="car-card"><img src="family.svg" alt=""/><p>Family Cars</p></div>
+            <div class="car-card"><img src="small.svg" alt=""/><p>Small cars</p></div>
+            <div class="car-card"><img src="5seater.svg" alt=""/><p>5 Seater</p></div>
+            <div class="car-card"><img src="big cars.svg" alt=""/><p>Big cars</p></div>
+            <div class="car-card"><img src="imported.svg" alt=""/><p>Imported cars</p></div>
+            <div class="car-card"><img src="old.svg" alt=""/><p>Old Cars</p></div>
+            <div class="car-card"><img src="5door.svg" alt=""/><p>5 Door</p></div>
+            <div class="car-card"><img src="4door.svg" alt=""/><p>4 Dor</p></div>
+            <div class="car-card"><img src="1000cc.svg" alt=""/><p>1000cc cars</p></div>
+            <div class="car-card"><img src="1300cc.svg" alt=""/><p>1300cc cars</p></div>
+            <div class="car-card"><img src="660cc.svg" alt=""/><p>660cc cars</p></div>
+  
+          </div>
+          <div class="carousel-slide">
+            <!-- Slide 2 -->
+            <div class="car-card"><img src="japanese.svg" alt=""/><p>Japanese cars</p></div>
+            <div class="car-card"><img src="low price.svg" alt=""/><p>Low Priced cars</p></div>
+            <div class="car-card"><img src="low milege.svg" alt=""/><p>Low Mileage cars</p></div>
+            <div class="car-card"><img src="jeep.svg" alt=""/><p>jeep</p></div>
+            <div class="car-card"><img src="hybrid.svg" alt=""/><p>Hybrid cars</p></div>
+            <div class="car-card"><img src="cheap.svg" alt=""/><p>Cheap cars</p></div>
+            <div class="car-card"><img src="4seater.svg" alt=""/><p>4 Seater</p></div>
+            <div class="car-card"><img src="diseal.svg" alt=""/><p>Diesel cars</p></div>
+            <div class="car-card"><img src="commercial.svg" alt=""/><p>Commercial</p></div>
+            <div class="car-card"><img src="7seater.svg" alt=""/><p>7 Seater</p></div>
+            <div class="car-card"><img src="electric.svg" alt=""/><p>Electric cars</p></div>
+            <div class="car-card"><img src="8seater.svg" alt=""/><p>8 Seater</p></div>
+          </div>
+          <div class="carousel-slide">
+            <!-- Slide 3 -->
+            <div class="car-card"><img src="2door.svg" alt=""/><p>2 Door</p></div>
+            <div class="car-card"><img src="modified.svg" alt=""/><p>Modifed cars</p></div>
+            <div class="car-card"><img src="2 seater.svg" alt=""/><p>2 saeter</p></div>
+            <div class="car-card"><img src="sports.svg" alt=""/><p>sports car</p></div>
+            <div class="car-card"><img src="3 door.svg" alt=""/><p>3 Door</p></div>
+            <div class="car-card"><img src="custom.svg" alt=""/><p>Custom Auction</p></div>
+            <div class="car-card"><img src="duplicate.svg" alt=""/><p>Duplicate file</p></div>
+            <div class="car-card"><img src="urgent.svg" alt=""/><p>Urgent</p></div>
+            <div class="car-card"><img src="carrydabba.svg" alt=""/><p>Carry Daba</p></div>
+            <div class="car-card"><img src="duplicatebook.svg" alt=""/><p>Duplicate Books cars</p></div>
+            <div class="car-card"><img src="duplicatenumber.svg" alt=""/><p>Duplicate Number Plate</p></div>
+            <div class="car-card"><img src="armyauction.svg" alt=""/><p>Army Auction Jeeps</p></div>
+          </div>
+          <div class="carousel-slide">
+            <!-- Slide 4 -->
+            <div class="car-card"><img src="amnesty.svg" alt=""/><p>Amnesty Scheme</p></div>
+            <div class="car-card"><img src="police.svg" alt=""/><p>Police Auction</p></div>
+            <div class="car-card"><img src="bank.svg" alt=""/><p>Bank Auction</p></div>
+            <div class="car-card"><img src="super.svg" alt=""/><p>Superdari</p></div>
+          </div>
+        </div>
+        <!-- Dots -->
+        <div class="carousel-indicators" style="bottom: -30px;">
+          <div class="carousel-dot active" onclick="switchSlide(0)"></div>
+          <div class="carousel-dot" onclick="switchSlide(1)"></div>
+          <div class="carousel-dot" onclick="switchSlide(2)"></div>
+          <div class="carousel-dot" onclick="switchSlide(3)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Pak wheels offereings-->
+<div class="container my-5">
+  <h3 class="mb-4">PakWheels Offerings</h3>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <div class="service-card">
+        <img src="offering1.png" alt="Sell it">
+        <div class="service-text">
+          <b>PakWheels</b>
+          <span>SELL IT FOR ME</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="offering2.png" alt="Inspection">
+        <div class="service-text">
+          <b>PakWheels</b>
+          <span>CAR INSPECTION</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="offering3.png" alt="Finance 1">
+        <div class="service-text">
+          <b>PakWheels</b>
+          <span>CAR FINANCE</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="offering4.png" alt="Finance 2">
+        <div class="service-text">
+          <b>PakWheels</b>
+          <span>CAR FINANCE</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6">
+      <div class="service-card">
+        <img src="offering5.png" alt="Auction">
+        <div class="service-text">
+          <b>PakWheels</b>
+          <span>AUCATION SHEET FOR VERIFICATION</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="offering6.png" alt="Insurance">
+        <div class="service-text">
+          <b>PakWheels</b>
+          <span>CAR INSURANCE</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="offering7.png" alt="Registration">
+        <div class="service-text">
+          <b>PakWheels</b>
+          <span>CAR REGISTRATION</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--managed by pakwheels-->
+<div class="container-fluid py-5" style="background-color: #F0F8FF;">
+  <h3 class="mb-4 fw-semibold">Managed by PakWheels</h3>
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-3">
+      <div class="card">
+        <img src="managed1.webp" class="card-img-top" alt="Changan Alsvin 2022">
+        <div class="card-body">
+          <h6 class="card-title text-primary">Changan Alsvin 2022</h6>
+          <p class="text-success mb-1">PKR 3,500,000</p>
+          <p class="location">Islamabad</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card">
+        <img src="managed2.webp" class="card-img-top" alt="Honda Vamos G 2014">
+        <div class="card-body">
+          <h6 class="card-title text-primary">Honda Vamos G 2014</h6>
+          <p class="text-success mb-1">PKR 1,530,000</p>
+          <p class="location">Karachi</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card">
+        <img src="managed3.webp" class="card-img-top" alt="Honda Civic VTi 2014">
+        <div class="card-body">
+          <h6 class="card-title text-primary">Honda Civic VTi 2014</h6>
+          <p class="text-success mb-1">PKR 3,850,000</p>
+          <p class="location">Faisalabad</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card">
+        <img src="managed4.webp" class="card-img-top" alt="Toyota Passo 2020">
+        <div class="card-body">
+          <h6 class="card-title text-primary">Toyota Passo 2020</h6>
+          <p class="text-success mb-1">PKR 3,875,000</p>
+          <p class="location">Lahore</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+<!-- Post Ad Form -->
+<section id="postad" class="container my-5">
+  <h3 class=" text-center mb-4">Post Your Car Ad</h3>
+  <div class="row justify-content-center">
+  <form>
+    <div class="mb-3"><label class="form-label">Car Title</label><input type="text" class="form-control" required></div>
+    <div class="mb-3"><label class="form-label">Price (PKR)</label><input type="number" class="form-control" required></div>
+    <div class="mb-3"><label class="form-label">City</label>
+      <select class="form-select" required>
+        <option selected disabled>Choose...</option>
+        <option>Lahore</option>
+        <option>Karachi</option>
+        <option>Islamabad</option>
+      </select>
+    </div>
+    <div class="mb-3"><label class="form-label">Mileage (KM)</label><input type="number" class="form-control" required></div>
+    <div class="mb-3"><label class="form-label">Transmission</label>
+      <select class="form-select" required>
+        <option selected disabled>Select...</option>
+        <option>Manual</option>
+        <option>Automatic</option>
+      </select>
+    </div>
+    <div class="mb-3"><label class="form-label">Description</label><textarea class="form-control" rows="4" required></textarea></div>
+    <div class="mb-3"><label class="form-label">Upload Car Image</label><input type="file" class="form-control" accept="image/*" required></div>
+    <button type="submit" class="btn btn-success">Submit Ad</button>
+  </form>
+</section>
+  
+<!--Featured new cars-->
+<section class="py-5" style="background-color:#F0F8FF;">
+  <div class="container">
+    <h3 class="mb-4">Featured New Cars</h3>
+    <div class="mb-4">
+        <span class="tab-link active">Popular</span>
+        <span class="tab-link">Upcoming</span>
+        <span class="tab-link">Newly Launched</span>
+      </div>
+
+    <div id="carCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+              <div class="card h-100 text-center p-3">
+                <img src="toyatafeatured.jpg" class="img-fluid mb-2" alt="Car 1">
+                <h5>Toyota Coralla</h5>
+                <p class="text-success">PKR 59.7 - 75.5 lacs</p>
+                
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+              <div class="card h-100 text-center p-3">
+                <img src="suzukifeatured.jpg" class="img-fluid mb-2" alt="Car 2">
+                <h5>Suzuki Alto</h5>
+                <p class="text-success">PKR 23.3 - 31.4 lacs</p>
+               
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+              <div class="card h-100 text-center p-3">
+                <img src="hondacityfeatured.jpg" class="img-fluid mb-2" alt="Car 3">
+                <h5>Honda City</h5>
+                <p class="text-success">PKR 46.5 - 58.5 lacs</p>
+                
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+              <div class="card h-100 text-center p-3">
+                <img src="hondacivicfeatured.jpg" class="img-fluid mb-2" alt="Car 4">
+                <h5>Honda Civic</h5>
+                <p class="text-success">PKR 86.6 - 99.0 lacs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+              <div class="card h-100 text-center p-3">
+                <img src="suzukifeatured.jpg" class="img-fluid mb-2" alt="Car 5">
+                <h5>Suzuki Cultus</h5>
+                <p class="text-success">PKR 86.6 - 99.0 lacs</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="card h-100 text-center p-3">
+                  <img src="yarisfeatured.jpg" class="img-fluid mb-2" alt="Car 3">
+                  <h5>Toyata Yaris </h5>
+                  <p class="text-success">PKR 44.8 - 63.2 lacs</p>
+                  
+                </div>
+              </div><div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="card h-100 text-center p-3">
+                  <img src="swiftfeatured.jpg" class="img-fluid mb-2" alt="Car 3">
+                  <h5>Suzuki Swift</h5>
+                  <p class="text-success">PKR 43.4 - 47.2 lacs</p>
+                  
+                </div>
+              </div><div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="card h-100 text-center p-3">
+                  <img src="fortunerfeatured.png" class="img-fluid mb-2" alt="Car 3">
+                  <h5>Toyata Fortuner</h5>
+                  <p class="text-success">PKR 1.45 - 1.99 crore</p>
+                  
+                </div>
+              </div>
+            
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!--New Cars By Make-->
+<section>
+<div class="container">
+  <h3>New Cars by Make</h3>
+  <div class="grid">
+    <div class="brand"><img src="Suzukinew.png" alt="Suzuki"><span>Suzuki</span></div>
+    <div class="brand"><img src="Tyotanew.png" alt="Toyota"><span>Toyota</span></div>
+    <div class="brand"><img src="Hondanew.png" alt="Honda"><span>Honda</span></div>
+    <div class="brand"><img src="kianew.png" alt="KIA"><span>KIA</span></div>
+    <div class="brand"><img src="hyundainew.png" alt="Hyundai"><span>Hyundai</span></div>
+    <div class="brand"><img src="mgnew.png" alt="MG"><span>MG</span></div>
+    <!-- second row-->
+    <div class="brand"><img src="bydnew.png" alt="BYD"><span>BYD</span></div>
+    <div class="brand"><img src="chagannew.png" alt="Changan"><span>Chagan</span></div>
+    <div class="brand"><img src="bmwnew.png" alt="BMW"><span>BMW</span></div>
+    <div class="brand"><img src="Audinew.png" alt="Audi"><span>Audi</span></div>
+    <div class="brand"><img src="protonnew.png" alt="Ptoton"><span>Ptoton</span></div>
+    <div class="brand"><img src="porchenew.png" alt="Porsche"><span>Porsche</span></div>
+    <!--third row-->
+    <div class="brand"><img src="mercedesnew.png" alt="Mercedes Benz"><span>Mercedes Benz</span></div>
+    <div class="brand"><img src="princenew.png" alt="Prince"><span>Prince</span></div>
+    <div class="brand"><img src="DFSKnew.png" alt="DFSK"><span>DFSK</span></div>
+    <div class="brand"><img src="Isuzunew.png" alt="Isuzu"><span>Isuzu</span></div>
+    <div class="brand"><img src="havalnew.png" alt="Haval"><span>Haval</span></div>
+    <div class="brand"><img src="baicnew.png" alt="BAIC"><span>BAIC</span></div>
+    <!--fourth row-->
+    <div class="brand"><img src="peugeotnew.png" alt="Peugeot"><span>Peugeot</span></div>
+    <div class="brand"><img src="oranew.png" alt="ORA"><span>ORA</span></div>
+    <div class="brand"><img src="jacnew.png" alt="JAC"><span>JAC</span></div>
+    <div class="brand"><img src="tanknew.png" alt="Tank"><span>Tank</span></div>
+    <div class="brand"><img src="JW-Forlandnew.png" alt="JW Forland"><span>JW Forland</span></div>
+    <div class="brand"><img src="cherynew.png" alt="Chery"><span>Chery</span></div>
+    <!--fifth row-->
+    <div class="brand"><img src="JMCnew.png" alt="JMC"><span>JMC</span></div>
+    <div class="brand"><img src="gugonew.png" alt="GUGO"><span>GUGO</span></div>
+    <div class="brand"><img src="honrinew.png" alt="Honri"><span>Honri</span></div>
+    <div class="brand"><img src="Deepal_new.png" alt="Deepal"><span>Deepal</span></div>
+    <div class="brand"><img src="Teslanew.png" alt="Tesla"><span>Tesla</span></div>
+    <div class="brand"><img src="jetournew.png" alt="Jetour"><span>Jetour</span></div>
+    <!--sixth row-->
+    <div class="brand"><img src="seresnew.png" alt="Seres"><span>Seres</span></div>
+    <div class="brand"><img src="Daehannew.png" alt="Daehan"><span>Daehan</span></div>
+    <div class="brand"><img src="Dongfengnew.png" alt="Dongfeng"><span>Dongfeng</span></div>
+    <div class="brand"><img src="BAWnew.png"alt="BAW"><span>BAW</span></div>
+  </div>
+</section>
+
+  <!--car comparison-->
+  <section class="py-5" style="background-color:#F0F8FF; width: 100vw; margin-left: 0%; margin-right: 0%;">
+    <div class="container">
+      <!-- Header -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="fw-semibold">Car Comparisons</h3>
+      
+      </div>
+  
+      <!-- Single bordered box -->
+      <div class="comparison-wrapper">
+        <div class="row align-items-center gy-4">
+          <!-- Main Comparison Images -->
+          <div class="col-lg-8 position-relative">
+            <div class="row align-items-center text-center">
+              <div class="col-5">
+                <img src="havalcomparison.png" alt="Car 1" class="img-fluid" />
+                <div class="comparison-title">Haval Jolion</div>
+              </div>
+              <div class="col-2 position-relative">
+                <div class="vs-circle">VS</div>
+              </div>
+              <div class="col-5">
+                <img src="kiacomparison.jpeg" alt="Car 2" class="img-fluid" />
+                <div class="comparison-title">KIA Sportage</div>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <a href="#" class="btn btn-outline-primary">View Comparison</a>
+            </div>
+          </div>
+  
+          <!-- Vertical Comparison List -->
+          <div class="col-lg-4 comparison-vertical">
+            <div class="comparison-pair d-flex align-items-center justify-content-center">
+              <div class="mb-2 mb-md-0">
+                <a href="#" class="text-dark text-decoration-none fw-semibold">MG HS</a><br>
+                <div class="vs-small">VS</div>
+                <a href="#" class="text-dark text-decoration-none fw-semibold">Hyundai Tucson</a>
+              </div>
+           
+            </div>
+  
+            <div class="comparison-pair d-flex align-items-center justify-content-center">
+              <div class="mb-2 mb-md-0">
+                <a href="#" class="text-dark text-decoration-none fw-semibold">Suzuki Alto</a><br>
+                <div class="vs-small">VS</div>
+                <a href="#" class="text-dark text-decoration-none fw-semibold">Suzuki Cultus</a>
+              </div>
+             
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--autostore car section-->
+  <section class="category-carousel-section py-5" style="background-color: #f8f9fa;">
+  <div class="container">
+    <h3 class="fw-bold">Auto Store Car Parts & Accessories</h3>
+    <h5 class="mb-4 fw-semibold">Sub Category</h5>
+
+    <!-- Carousel -->
+    <div id="categoryCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row text-center">
+            <!-- 6 items in 2 rows (3 + 3) -->
+            <div class="col-6 col-md-2 mb-4">
+              <div class="card custom-card">
+                <img src="carwasher.png" alt="Car Washer">
+                <p class="mt-2">Car Washer</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+              <div class="card custom-card">
+                <img src="tyres.png" alt="Tyres">
+                <p class="mt-2">Tyres</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+              <div class="card custom-card">
+                <img src="helmets.png" alt="Helmets">
+                <p class="mt-2">Helmets</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+              <div class="card custom-card">
+                <img src="keychain.png" alt="Keychains">
+                <p class="mt-2">Keychains</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+              <div class="card custom-card">
+                <img src="carbattery.png" alt="Car Battery">
+                <p class="mt-2">Car Battery</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+              <div class="card custom-card">
+                <img src="alloyrims.png" alt="Alloy Rims">
+                <p class="mt-2">Alloy Rims</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row text-center">
+            <div class="col-6 col-md-2 mb-4">
+              <div class="card custom-card">
+                <img src="engineoil.png" alt="Engine Oil">
+                <p class="mt-2">Engine Oil</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+              <div class="card custom-card">
+                <img src="carcharger.png" alt="Car Charger">
+                <p class="mt-2">Car Charger</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+              <div class="card custom-card">
+                <img src="microfibercloth.png" alt="Fiber Cloth">
+                <p class="mt-2">Fiber Cloth</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+              <div class="card custom-card">
+                <img src="gpstracker.png" alt="GPS Tracker">
+                <p class="mt-2">GPS Tracker</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+              <div class="card custom-card">
+                <img src="enginesforsale.png" alt="Engine">
+                <p class="mt-2">Engine</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+              <div class="card custom-card">
+                <img src="fuelpump.png" alt="Fuel Pump">
+                <p class="mt-2">Fuel Pump</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+  <!--New Bikes By Make-->
+<section>
+  <div class="container-fluid py-5" style="background-color:#F0F8FF;">
+    <h3>New Bikes by Make</h3>
+    <div class="grid">
+      <div class="brand"><img src="suzukibike.png" alt="Honda"><span>Honda</span></div>
+      <div class="brand"><img src="yamahabike.png" alt="Yamaha"><span>Yamaha</span></div>
+      <div class="brand"><img src="suzukibike.png" alt="Suzuki"><span>Suzuki</span></div>
+      <div class="brand"><img src="uniquebike.png" alt="Unique"><span>Unique</span></div>
+      <div class="brand"><img src="metrobike.png" alt="Metro"><span>Metro</span></div>
+      <div class="brand"><img src="hi-Speedbike.png" alt="Hi Speed"><span>Hi Speed</span></div>
+      <!-- second row-->
+      <div class="brand"><img src="Unitedbike.png" alt="United"><span>United</span></div>
+      <div class="brand"><img src="BMWbike.png" alt="BMW"><span>BMW</span></div>
+      <div class="brand"><img src="Road-princebike.png" alt="Road Prince"><span>Road Prince</span></div>
+      <div class="brand"><img src="Benellibike.png" alt="Benelli"><span>Benelli</span></div>
+      <div class="brand"><img src="lectrixbike.png" alt="Lectrix"><span>Lectrix</span></div>
+      <div class="brand"><img src="evee-bike.png" alt="Evee"><span>Evee</span></div>
+      <!--third row-->
+      <div class="brand"><img src="joltabike.png" alt="Jolta Electric"><span>Jolta Electric</span></div>
+      <div class="brand"><img src="Super-Powerbike.png" alt="Super Power"><span>Super Power</span></div>
+      <div class="brand"><img src="keewybike.png" alt="KEEWAY"><span>KEEWAY</span></div>
+      <div class="brand"><img src="Kawasakibike.png" alt="Kawasaki"><span>Kawasaki</span></div>
+      <div class="brand"><img src="benlngbike.png" alt="Benling"><span>Benling</span></div>
+      <div class="brand"><img src="SuperStarbike.png" alt="Super Star"><span>Super Star</span></div>
+      <!--fourth row-->
+      <div class="brand"><img src="Vlektrabike.jpeg" alt="Vlektra"><span>Vlektra</span></div>
+      <div class="brand"><img src="crownbike.png" alt="Crown"><span>Crown</span></div>
+      <div class="brand"><img src="lifanbike.png" alt="Lifan"><span>Lifan</span></div>
+      <div class="brand"><img src="ezbike.png" alt="Ezbike"><span>Ezbike</span></div>
+      <div class="brand"><img src="yadeabike.png"alt="Yadea"><span>Yadea</span></div>
+      <div class="brand"><img src="overdrivebike.jpg" alt="OVERDRIVE"><span>OVERDRIVE</span></div>
+    </div>
+  </section>
+
+  <!--featured new bikes-->
+  <section class="py-5" >
+    <div class="container">
+      <h3 class="mb-4">Featured New Cars</h3>
+      <div class="mb-4">
+          <span class="tab-link active">Popular</span>
+          <span class="tab-link">Upcoming</span>
+          <span class="tab-link">Newly Launched</span>
+        </div>
+  
+      <div id="carCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+  
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="card h-100 text-center p-3">
+                  <img src="hondacdbike.jpg" class="img-fluid mb-2" alt="Car 1">
+                  <h5>Honda CD 70</h5>
+                  <p class="text-success">PKR 157,900</p>
+                  
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="card h-100 text-center p-3">
+                  <img src="hondacgbike.jpg" class="img-fluid mb-2" alt="Car 2">
+                  <h5>Honda CG 125</h5>
+                  <p class="text-success">PKR 234,900</p>
+                 
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="card h-100 text-center p-3">
+                  <img src="suzukigsbike.jpg" class="img-fluid mb-2" alt="Car 3">
+                  <h5>Suzuki GS 150</h5>
+                  <p class="text-success">PKR 389,000</p>
+                  
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="card h-100 text-center p-3">
+                  <img src="yamahaybrbike.jpg" class="img-fluid mb-2" alt="Car 4">
+                  <h5>Yamaha YBR 125</h5>
+                  <p class="text-success">PKR 466,000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="card h-100 text-center p-3">
+                  <img src="yamaha125bike.png" class="img-fluid mb-2" alt="Car 5">
+                  <h5>Yamaha YBR 125G</h5>
+                  <p class="text-success">PKR 485,000</p>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3 mb-3">
+                  <div class="card h-100 text-center p-3">
+                    <img src="hondacbbike.jpg" class="img-fluid mb-2" alt="Car 3">
+                    <h5>Honda CB 150F</h5>
+                    <p class="text-success">PKR 485,000</p>
+                    
+                  </div>
+                </div><div class="col-12 col-md-6 col-lg-3 mb-3">
+                  <div class="card h-100 text-center p-3">
+                    <img src="suzukigrbike.jpg" class="img-fluid mb-2" alt="Car 3">
+                    <h5>Suzuki GR 150</h5>
+                    <p class="text-success">PKR 547,000</p>
+                    
+                  </div>
+                </div><div class="col-12 col-md-6 col-lg-3 mb-3">
+                  <div class="card h-100 text-center p-3">
+                    <img src="hondapridorbike.jpg" class="img-fluid mb-2" alt="Car 3">
+                    <h5>Honda Pridor</h5>
+                    <p class="text-success">PKR 208,900</p>
+                    
+                  </div>
+                </div>
+              
+            </div>
+          </div>
+  
+        </div>
+  
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Login -->
+  <section id="login" class="container-fluid py-5" style="background-color:#F0F8FF;">
+    <h3 class="text-center mb-4">Login to Your Account</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3"><label class="form-label">Email</label><input type="email" class="form-control" required></div>
+          <div class="mb-3"><label class="form-label">Password</label><input type="password" class="form-control" required></div>
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Register -->
+  <section id="register" class="container-fluid my-5" style="background-color:#F0F8FF;">
+    <h3 class="text-center mb-4">Create a New Account</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3"><label class="form-label">Full Name</label><input type="text" class="form-control" required></div>
+          <div class="mb-3"><label class="form-label">Email</label><input type="email" class="form-control" required></div>
+          <div class="mb-3"><label class="form-label">Password</label><input type="password" class="form-control" required></div>
+          <button type="submit" class="btn btn-success w-100">Register</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!--section before footer-->
+  <div class="container py-4">
+    <h3>News, Reviews & Discussions</h3>
+    <!-- Tabs -->
+    <ul class="nav nav-tabs border-0 mb-4">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Automotive News</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Car Reviews</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Discussions</a>
+      </li>
+    </ul>
+
+    <!-- News Articles -->
+    <div class="mb-4">
+      <div class="d-flex mb-3">
+        <img src="news1.jpg" class="news-img me-3" alt="Suzuki Mehran">
+        <div>
+          <div class="news-title">Are 20-Year-Old Vehicles Really Banned on Motorway?</div>
+          <div class="news-date">May 02, 2025</div>
+          <div class="text-muted">Lately, there’s been a lot of confusion about whether 20-years-old vehicles are banned from driving on Pakistan’s motorways. Some people have said the ban is already in place...</div>
+        </div>
+      </div>
+      <div class="d-flex">
+        <img src="news2.jpg" class="news-img me-3" alt="Kia Picanto">
+        <div>
+          <div class="news-title">Kia Picanto AT Gets Price Hike from May 1, 2025</div>
+          <div class="news-date">April 30, 2025</div>
+          <div class="text-muted">Kia Lucky Motors has officially announced a price revision for its popular compact hatchback. The price increase will take effect from May 1, 2025...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Get App Section -->
+    <div class="get-app-section">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <h4 class="fw-semibold">Get The PakWheels App</h4>
+          <p class="text-muted">Buy & Sell Cars, Bikes and Auto Parts faster and better using our App</p>
+          <div class="d-flex gap-2">
+            <img src="google-play-badge-fe1c02f5d509b88ec786cc1893f68200.svg" style="height: 40px;" alt="Google Play">
+            <img src="app-store-badge-47a3fa71b3442ad5181388d9060d4478.svg" style="height: 40px;" alt="App Store">
+            <img src="huawei-store-badge-d13aaefcccf041b3e65b9d762e971c98.svg" style="height: 40px;" alt="App Gallery">
+          </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-md-end align-items-center gap-3">
+          <div class="text-center">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://pakwheels.com&size=100x100" class="qr-img" alt="QR Code">
+            <p class="mt-2">Scan the QR to get the App</p>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!--footer-->
+<footer class="pakwheels-footer text-white pt-5 pb-3" style="background-color: #1e1e1e;">
+  <div class="container">
+    <!-- First Row -->
+    <div class="row text-start g-3">
+      <div class="col-md-2 col-6">
+        <h6>Cars By Make</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Toyota Cars for Sale</a></li>
+          <li><a href="#">Suzuki Cars for Sale</a></li>
+          <li><a href="#">Honda Cars for Sale</a></li>
+          <li><a href="#">Daihatsu Cars for Sale</a></li>
+          <li><a href="#">Mitsubishi Cars for Sale</a></li>
+          <li><a href="#">Nissan Cars for Sale</a></li>
+          <li><a href="#">Mercedes Cars for Sale</a></li>
+          <li><a href="#">Hyundai Cars for Sale</a></li>
+          <li><a href="#">BMW Cars for Sale</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-6">
+        <h6>Cars By City</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Cars in Karachi</a></li>
+          <li><a href="#">Cars in Lahore</a></li>
+          <li><a href="#">Cars in Islamabad</a></li>
+          <li><a href="#">Cars in Rawalpindi</a></li>
+          <li><a href="#">Cars in Peshawar</a></li>
+          <li><a href="#">Cars in Faisalabad</a></li>
+          <li><a href="#">Cars in Multan</a></li>
+          <li><a href="#">Cars in Gujranwala</a></li>
+          <li><a href="#">Cars in Sialkot</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-6">
+        <h6>Explore PakWheels</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Used Cars</a></li>
+          <li><a href="#">Used Bikes</a></li>
+          <li><a href="#">New Cars</a></li>
+          <li><a href="#">Auto Parts & Accessories</a></li>
+          <li><a href="#">Cool Rides</a></li>
+          <li><a href="#">Forums</a></li>
+          <li><a href="#">Autoshow</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-6">
+        <h6>PakWheels.com</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">About PakWheels.com</a></li>
+          <li><a href="#">Our Products</a></li>
+          <li><a href="#">Advertise With Us</a></li>
+          <li><a href="#">How To Pay</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Refunds & Returns</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-12">
+        <h6>Sell On PakWheels</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Sell Your Car</a></li>
+          <li><a href="#">Sell Your Bike</a></li>
+          <li><a href="#">Sell Accessory</a></li>
+        </ul>
+        <div class="my-3">
+          <label class="form-label">Subscribe to our Newsletter</label>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="name@email.com">
+            <button class="btn btn-success">Subscribe</button>
+          </div>
+        </div>
+        <div class="social-icons my-3">
+          <h6>Follow Us</h6>
+          <a href="#"><i class="bi bi-twitter text-white me-2"></i></a>
+          <a href="#"><i class="bi bi-facebook text-white me-2"></i></a>
+          <a href="#"><i class="bi bi-pinterest text-white me-2"></i></a>
+          <a href="#"><i class="bi bi-instagram text-white me-2"></i></a>
+          <a href="#"><i class="bi bi-youtube text-white"></i></a>
+        </div>
+        <div class="app-buttons">
+          <h6>Download Mobile Apps</h6>
+          <img src="google-play-badge-fe1c02f5d509b88ec786cc1893f68200.svg" height="40" />
+          <img src="app-store-badge-47a3fa71b3442ad5181388d9060d4478.svg" height="40" />
+          <br>
+          <img src="huawei-store-badge-d13aaefcccf041b3e65b9d762e971c98.svg" height="40" class="mt-2" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Row with smaller top margin -->
+    <div class="row text-start pt-3 g-3">
+      <div class="col-md-2 col-6">
+        <h6>Cars by Category</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Jeep</a></li>
+          <li><a href="#">Japanese Cars</a></li>
+          <li><a href="#">Imported Cars</a></li>
+          <li><a href="#">Automatic Cars</a></li>
+          <li><a href="#">Low Priced Cars</a></li>
+          <li><a href="#">4x4 Cars</a></li>
+          <li><a href="#">660cc Cars</a></li>
+          <li><a href="#">1000cc Cars</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-6">
+        <h6>Cars by Body Type</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Hatchback</a></li>
+          <li><a href="#">Sedan</a></li>
+          <li><a href="#">SUV</a></li>
+          <li><a href="#">Crossover</a></li>
+          <li><a href="#">Mini Van</a></li>
+          <li><a href="#">Compact SUV</a></li>
+          <li><a href="#">Van</a></li>
+          <li><a href="#">MPV</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-6">
+        <h6>Cars by Color</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">White Cars</a></li>
+          <li><a href="#">Silver Cars</a></li>
+          <li><a href="#">Black Cars</a></li>
+          <li><a href="#">Grey Cars</a></li>
+          <li><a href="#">Blue Cars</a></li>
+          <li><a href="#">Red Cars</a></li>
+          <li><a href="#">Green Cars</a></li>
+          <li><a href="#">Gold Cars</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-6">
+        <h6>Cars by Province</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Cars in Punjab</a></li>
+          <li><a href="#">Cars in Sindh</a></li>
+          <li><a href="#">Cars in KPK</a></li>
+          <li><a href="#">Cars in Balochistan</a></li>
+          <li><a href="#">Cars in Azad Kashmir</a></li>
+          <li><a href="#">Cars in Federally Administered Tribal Areas</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Footer Info -->
+    <div class="text-center pt-4 mt-4 border-top border-secondary small">
+      <p class="mb-0">Copyright © 2003 - 2025 PakWheels (Pvt) Ltd. All Rights Reserved.</p>
+      <p><a href="#" class="text-white">Terms of Service</a> | <a href="#" class="text-white">Privacy Policy</a></p>
+      <p>Reproduction of material from any PakWheels.com pages without permission is strictly prohibited.</p>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src="pak.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
