@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="pak.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
+  <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+
 </head>
 <body>
 
@@ -837,34 +841,96 @@
 
 
 
-  <!-- Login -->
-  <section id="login" class="container-fluid py-5" style="background-color:#F0F8FF;">
-    <h3 class="text-center mb-4">Login to Your Account</h3>
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <form>
-          <div class="mb-3"><label class="form-label">Email</label><input type="email" class="form-control" required></div>
-          <div class="mb-3"><label class="form-label">Password</label><input type="password" class="form-control" required></div>
-          <button type="submit" class="btn btn-primary w-100">Login</button>
-        </form>
-      </div>
+ <!-- Login -->
+<section id="login" class="container-fluid py-5" style="background-color:#F0F8FF;">
+  <h3 class="text-center mb-4">Login to Your Account</h3>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form id="loginForm">
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" id="loginEmail" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" id="loginPassword" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100" id="loginBtn">Login</button>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Register -->
-  <section id="register" class="container-fluid my-5" style="background-color:#F0F8FF;">
-    <h3 class="text-center mb-4">Create a New Account</h3>
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <form>
-          <div class="mb-3"><label class="form-label">Full Name</label><input type="text" class="form-control" required></div>
-          <div class="mb-3"><label class="form-label">Email</label><input type="email" class="form-control" required></div>
-          <div class="mb-3"><label class="form-label">Password</label><input type="password" class="form-control" required></div>
-          <button type="submit" class="btn btn-success w-100">Register</button>
-        </form>
-      </div>
+<!-- Register -->
+<section id="register" class="container-fluid my-5" style="background-color:#F0F8FF;">
+  <h3 class="text-center mb-4">Create a New Account</h3>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form id="registerForm">
+        <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="registerName" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" id="registerEmail" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" id="registerPassword" required>
+        </div>
+        <button type="submit" class="btn btn-success w-100" id="registerBtn">Register</button>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
+<script>
+
+// Initialize default user if not set
+let users = JSON.parse(localStorage.getItem("users")) || [];
+
+if (!users.find(user => user.email === "user123@gmail.com")) {
+  users.push({ email: "user123@gmail.com", password: "123" });
+  localStorage.setItem("users", JSON.stringify(users));
+}
+
+// Login Logic
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const email = document.getElementById("loginEmail").value.trim();
+  const password = document.getElementById("loginPassword").value;
+
+  const match = users.find(user => user.email === email && user.password === password);
+
+  if (match) {
+    alert("Login successful!");
+    window.location.href = "goodbye.html"; // ← Change this to your actual redirect page
+  } else {
+    alert("Invalid email or password.");
+  }
+});
+
+// Register Logic
+document.getElementById("registerForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("registerName").value.trim(); // Optional field
+  const email = document.getElementById("registerEmail").value.trim();
+  const password = document.getElementById("registerPassword").value;
+
+  const exists = users.find(user => user.email === email);
+
+  if (exists) {
+    alert("User already exists. Please log in.");
+  } else {
+    users.push({ email, password });
+    localStorage.setItem("users", JSON.stringify(users));
+    alert("Registration successful! You can now log in.");
+    document.getElementById("registerForm").reset();
+  }
+});
+</script>
 
   <!--section before footer-->
   <div class="container py-4">
@@ -1009,10 +1075,10 @@
         </div>
         <div class="app-buttons">
           <h6>Download Mobile Apps</h6>
-          <img src="https://wsa4.pakwheels.com/assets/google-play-badge-2b25567e615877165abf3966c5401447681bf66757a1f369ce4a859c2a3267ec.svg" height="40" />
-          <img src="https://wsa3.pakwheels.com/assets/app-store-badge-54987f21813db5f11ce13b5ceeb09afa5cb324f3ce2b3e4ecfb531fdebca481e.svg" height="40" />
+          <img src="google-play-badge-fe1c02f5d509b88ec786cc1893f68200.svg" height="40" />
+          <img src="app-store-badge-47a3fa71b3442ad5181388d9060d4478.svg" height="40" />
           <br>
-          <img src="https://wsa3.pakwheels.com/assets/huawei-store-badge-dc65f40afe22f3607d3f846b27ecdbaab69521ac83b1a0f4f3ed88ee3807e764.svg" height="40" class="mt-2" />
+          <img src="huawei-store-badge-d13aaefcccf041b3e65b9d762e971c98.svg" height="40" class="mt-2" />
         </div>
       </div>
     </div>
