@@ -1,5 +1,4 @@
-
-/*hereos section*/
+/hereos section/
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -102,7 +101,6 @@ body {
     display: none;
   }
 }
-
 /* browse used cars*/
 .tab-btn {
   cursor: pointer;
@@ -110,65 +108,73 @@ body {
   margin-right: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 3px solid transparent;
+  margin-bottom: 0.5rem; /* Added for better wrapping */
 }
 .tab-btn.active {
   border-bottom: 3px solid #007bff;
   color: #007bff;
 }
+
+/* Default styles for the card itself */
 .car-card {
   border: 1px solid #ddd;
   padding: 15px;
   text-align: center;
   background: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  width: 120px;
-  flex: 0 0 auto;
-  display: flex;               
-  flex-direction: column;      
-  justify-content: space-between; 
+  width: 120px; /* Default width for grid layout */
+  flex: 0 0 auto; /* Needed if using flex fallback, but grid overrides */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  /* Keep height consistent */
+  min-height: 130px; /* Adjust as needed based on content */
 }
 .car-card img {
   width:  60px;
   height: 60px;
-  object-fit: contain; 
+  object-fit: contain;
   margin-bottom: 10px;
 }
-
 .car-card p {
   margin: 0;
   font-size: 14px;
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap; /* or wrap it if you prefer: white-space: normal; */
+  white-space: nowrap;
   max-width: 100%;
 }
+
 .carousel-wrapper {
   position: relative;
-  overflow: hidden;
-  padding: 0 40px;
-  overflow: hidden;
+  /* overflow: hidden; / / Let's remove this for now to see if arrows get cut off */
+  padding: 0 40px; /* Space for arrows */
   width: 100%;
-
+  box-sizing: border-box;
 }
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 110%; /* 4 slides × 100% */
-}
-.carousel-slide {
-flex: 0 0 100%;
-display: grid;
-grid-template-columns: repeat(6, 1fr); /* ✅ fixed to exactly 6 columns */
-grid-template-rows: auto auto;   
-gap: 1rem;
-justify-content: center;
-padding: 1rem 0;
-box-sizing: border-box;
+  /* width: 400%; / / Width depends on number of slides, JS handles transform */
 }
 
+/* Default Grid Layout (Large screens and up - >= 768px) */
+.carousel-slide {
+  flex: 0 0 100%; /* Take full width of the track */
+  display: grid;
+  /* Adjust number of columns based on desired large screen layout */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* More flexible grid */
+  /* Or keep fixed 6 columns if preferred: */
+  /* grid-template-columns: repeat(6, 1fr); */
+  grid-template-rows: auto auto; /* Adjust if you have more than 2 rows */
+  gap: 1rem;
+  padding: 1rem 0; /* Padding inside the slide */
+  box-sizing: border-box;
+  justify-items: center; /* Center items within their grid cell */
+}
 
 .arrow-btn {
   position: absolute;
@@ -185,13 +191,15 @@ box-sizing: border-box;
   cursor: pointer;
   z-index: 10;
 }
-.arrow-left { left: 0; }
-.arrow-right { right: 0; }
+.arrow-left { left: 5px; } /* Move closer to edge */
+.arrow-right { right: 5px; } /* Move closer to edge */
+
 .carousel-indicators {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
   gap: 8px;
+  position: relative; /* Ensure it's below arrows if they overlap */
 }
 .carousel-dot {
   width: 10px;
@@ -203,13 +211,69 @@ box-sizing: border-box;
 .carousel-dot.active {
   background-color: #007bff;
 }
-@media (max-width: 768px) {
-.carousel-slide {
-grid-template-columns: repeat(2, 1fr); /* 2 items per row on small screens */
-}
+
+/* --- Responsive Adjustments --- */
+
+/* Medium, Small, and Extra-Small Screens (less than 768px) */
+@media (max-width: 767.98px) {
+  .carousel-slide {
+    grid-template-columns: 1fr; /* Force a single column */
+    gap: 0.75rem; /* Adjust gap for vertical stacking */
+    padding: 0.5rem 0; /* Adjust padding */
+    /* Remove fixed rows if any were set */
+    grid-template-rows: unset;
+  }
+
+  .car-card {
+    width: 80%; /* Make card wider to fill the single column better */
+    max-width: 250px; /* Optional: Prevent it becoming too wide */
+    padding: 10px; /* Adjust padding if needed */
+    min-height: unset; /* Allow height to be natural */
+  }
+
+  .car-card img {
+    width: 50px; /* Slightly smaller image */
+    height: 50px;
+    margin-bottom: 8px;
+  }
+
+   .car-card p {
+     font-size: 13px; /* Slightly smaller text */
+     white-space: normal; /* Allow text wrap */
+     overflow: visible;
+     text-overflow: clip;
+   }
+
+  .carousel-wrapper {
+    padding: 0 30px; /* Reduce side padding for arrows */
+  }
+
+  .arrow-btn {
+     width: 25px; /* Smaller arrows */
+     height: 25px;
+     /* Adjust top position if needed due to card height changes */
+     /* top: 45%; */
+  }
+   .arrow-left { left: 3px; }
+   .arrow-right { right: 3px; }
 }
 
-/*pak wheels offerings*/
+/* Optional: Further adjustments for very small screens (e.g., less than 480px) */
+@media (max-width: 479.98px) {
+    .tab-btn {
+        margin-right: 0.8rem;
+        font-size: 14px; /* Smaller tab text */
+    }
+    .car-card {
+        width: 90%; /* Even wider */
+        max-width: none; /* Remove max-width */
+    }
+    .carousel-wrapper {
+        padding: 0 25px; /* Even less padding */
+    }
+}
+
+/pak wheels offerings/
 .service-card {
   display: flex;
   align-items: center;
@@ -231,7 +295,7 @@ grid-template-columns: repeat(2, 1fr); /* 2 items per row on small screens */
   color: #0d6efd;
 }
 
-/*managed pakwheels*/
+/managed pakwheels/
 body {
   background-color: #f5f5f5;
 }
@@ -256,7 +320,7 @@ body {
   color: #6c757d;
   font-size: 0.9rem;
 }
-/*featured new cars*/
+/featured new cars/
 .tab-link {
   display: inline-block;
   padding: 6px 12px;
@@ -285,7 +349,7 @@ body {
 }
 
 
-/*new cars*/
+/new cars/
 body {
   font-family: Arial, sans-serif;
 }
@@ -322,7 +386,7 @@ h2 {
   text-decoration: underline;
   transform: scale(1.05);
 }
-/*comaprsion cars*/
+/comaprsion cars/
 body {
   background-color: #f5f5f5;
 }
@@ -383,7 +447,7 @@ body {
   }
 }
 
-/*autostore section*/
+/autostore section/
 body {
   background-color: #f8f9fa;
 }
@@ -420,7 +484,7 @@ body {
 }
 
 
-/*new bikes*/
+/new bikes/
 body {
   font-family: Arial, sans-serif;
 }
@@ -556,7 +620,7 @@ footer {
 .pakwheels-footer .social-icons a i {
   font-size: 18px;
 }
-/*section before footer*/
+/section before footer/
 body {
   background-color: #fff;
 }
@@ -584,7 +648,5 @@ body {
 }
 .qr-img, .app-img {
   max-width: 100%;
-  height: auto;
+  height: auto;
 }
-
-               
